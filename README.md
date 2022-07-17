@@ -1,6 +1,6 @@
 # 티라노사우르스 게임 만들기
 ## 설명
-코딩애플님의 강의를 보고 만든 티라노사우르스 게임을 좀 더 발전시켜보았습니다.
+코딩애플님의 강의를 보고 만든 티라노사우르스 게임을 좀 더 발전시켰고, 해당 이론을 바탕으로 똥 피하기 게임을 만들었다.
 
 + https://www.youtube.com/watch?v=qkTtmgCjHhM
 + https://www.youtube.com/watch?v=7TXGvVblfLs&t=2
@@ -10,6 +10,7 @@
 2. 게임 재시작 기능 구현
 3. vue3 사용
 4. 타입스크립트 사용
+5. 해당 코드를 응용해서 똥피하기 게임 제작
 
 ## 결과물
 https://github.com/seunghunHan1/dinosour-poop
