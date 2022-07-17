@@ -1,6 +1,7 @@
 <template>
   <div class="score">{{ convertedScore }}</div>
   <div class="re-start" @click="reStartGame" v-show="isGameOver">RESTART</div>
+  <router-link to="/" class="home" v-show="isGameOver">Home</router-link>
 </template>
 
 <script lang="ts" setup>
@@ -57,19 +58,33 @@ watch(
   font-family: "Black Han Sans", sans-serif;
   position: fixed;
   top: 50px;
-  left: 535px;
+  left: 900px;
   font-size: 1.5rem;
 }
 .re-start {
   font-family: "Black Han Sans", sans-serif;
   position: fixed;
-  top: 150px;
-  left: 250px;
+  top: 250px;
+  left: 450px;
   font-size: 1.5rem;
   transition: color 0.5s;
   cursor: pointer;
 }
 .re-start:hover {
+  color: dodgerblue;
+}
+.home {
+  text-decoration: none;
+  color: black;
+  font-family: "Black Han Sans", sans-serif;
+  position: fixed;
+  top: 200px;
+  left: 450px;
+  font-size: 1.5rem;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+.home:hover {
   color: dodgerblue;
 }
 </style>

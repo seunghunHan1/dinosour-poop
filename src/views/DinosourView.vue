@@ -18,18 +18,18 @@ let ctx = {} as CanvasRenderingContext2D;
 const isGameOver = ref<boolean>(false);
 
 // 공룡 정보
-let dino = new CanvasElemClass(10, 200, 60, 70);
+let dino = new CanvasElemClass(10, 300, 60, 70);
 let is_jumping = false;
 const JUMP_SPEED = {
-  up: 6,
-  down: 7,
+  up: 7,
+  down: 6,
 };
 
 // 장애물 정보
 let cactus = [] as CanvasElemModel[];
 let CACTUS_CREATE_DELAY = 500;
 let last_cactus_create_time = new Date().getTime();
-const CACTUS_SPEED = 5;
+const CACTUS_SPEED = 8;
 
 // Interval
 let frameInterval = 0;
@@ -92,28 +92,28 @@ const runEveryFrame = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // 바닥 그림
-  ctx.fillRect(0, 270, 600, 100);
+  ctx.fillRect(0, 370, 1000, 100);
 
   // CACTUS_CREATE_DELAY 마다 장애물 생성
   if (checkDelayTime(CACTUS_CREATE_DELAY, last_cactus_create_time)) {
     const rand_2_5 = Math.floor(Math.random() * 3) + 3;
     CACTUS_CREATE_DELAY = rand_2_5 * 1000;
     last_cactus_create_time = new Date().getTime();
-    cactus.push(new CanvasElemClass(500, 220, 50, 50));
+    cactus.push(new CanvasElemClass(900, 320, 50, 50));
   }
 
   // 점프 중 일 떄
   if (dino.jump) {
-    if (is_jumping && dino.y <= 100) {
+    if (is_jumping && dino.y <= 200) {
       is_jumping = false;
     }
     dino.y = is_jumping
       ? dino.y - JUMP_SPEED.up
-      : dino.y + JUMP_SPEED.down >= 200
-      ? 200
-      : dino.y + 3;
+      : dino.y + JUMP_SPEED.down >= 300
+      ? 300
+      : dino.y + JUMP_SPEED.down;
 
-    dino.jump = dino.y < 200;
+    dino.jump = dino.y < 300;
   }
 
   // 화면 그려 줌
@@ -141,6 +141,8 @@ const gameOver = () => {
 // 게임 재시작
 const reStartGame = () => {
   isGameOver.value = false;
+  dino = new CanvasElemClass(10, 300, 60, 70);
+  is_jumping = false;
   cactus = [] as CanvasElemModel[];
   runEveryFrame();
 };
