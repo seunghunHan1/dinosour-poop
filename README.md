@@ -12,8 +12,8 @@
 4. 타입스크립트 사용
 
 ## 결과물
-https://kimsj912.github.io/DinosaurGame/
+https://github.com/seunghunHan1/dinosour-poop
 
   
 ## 느낀점
-이전에 했던 티라노 게임을 다시 만들며 이전보다 성장한 느낌을 느껴볼 수 있었습니다.
+canvas의 사용법을 좀 더 자세히 배운 거 같고 타입스크립트와 vue3를 이론으로만 공부 하던걸 이번 프로젝트 적용시켜보면서 좀 익숙해진 것 같습니다.
