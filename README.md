@@ -2,8 +2,8 @@
 ## 설명
 코딩애플님의 강의를 보고 만든 티라노사우르스 게임을 좀 더 발전시켜보았습니다.
 
-https://www.youtube.com/watch?v=qkTtmgCjHhM
-https://www.youtube.com/watch?v=7TXGvVblfLs&t=2
++ https://www.youtube.com/watch?v=qkTtmgCjHhM
++ https://www.youtube.com/watch?v=7TXGvVblfLs&t=2
 
 ## 추가 구현
 1. 스코어 기능 구현
